@@ -12,16 +12,37 @@ a s b 1---b // a is the previous state , s is the input symbol (Symbol starts fr
 <br/>
 <br/>
 ----------k times<br/>
+# Input
+<br/>
+5 2<br/>
+1 4<br/>
+9<br/>
+0 1 2 0 1<br/> 
+0 2 1 3<br/>
+1 1 1 2<br/>
+1 2 1 2<br/>
+2 1 1 4<br/>
+3 1 1 3<br/>
+3 2 1 2 <br/>
+4 1 1 4<br/>
+4 2 1 3 <br/>
+<br/>
+<br/>
+<br/>
 
-5 2
-1 4
-9
-0 1 2 0 1 
-0 2 1 3
-1 1 1 2
-1 2 1 2
-2 1 1 4
-3 1 1 3
-3 2 1 2 
-4 1 1 4
-4 2 1 3 
+# Output
+
+DFA for the corresponding NFA<br/>
+0  0,1  3  <br/>
+0,1  0,1,2  2,3 <br/> 
+3  3  2  <br/>
+0,1,2  0,1,2,4f  2,3<br/>  
+2,3  3,4f  2  <br/>
+2  4f  -1  <br/>
+0,1,2,4f  0,1,2,4f  2,3<br/>  
+3,4f  3,4f  2,3  <br/>
+4f  4f  3  <br/>
+-1  -1  -1  <br/>
+
+<br/><br/> where f means the final states and -1 means phi
+
